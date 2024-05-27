@@ -11,34 +11,20 @@
 
 . ${R}etc/init.d/rc.mc_defaults
 
-# multirotor with tilt airframe
+param set-default MAV_TYPE 15
+
 param set-default CA_AIRFRAME 8
-
-param set-default CA_ROTOR_COUNT 2
-param set-default CA_ROTOR0_PX 1
-param set-default CA_ROTOR0_PY 1
-param set-default CA_ROTOR0_TILT 2
-param set-default CA_ROTOR1_PX -1
-param set-default CA_ROTOR1_PY -1
-param set-default CA_ROTOR2_PX 1
-param set-default CA_ROTOR2_PY -1
+# Tricopter
+param set-default CA_ROTOR0_PX 0.3500
+param set-default CA_ROTOR0_PY 0.4330
+param set-default CA_ROTOR1_PX 0.2500
+param set-default CA_ROTOR1_PY -0.4300
+param set-default CA_ROTOR2_PX -0.5000
+param set-default CA_ROTOR2_PY 0.0000
 param set-default CA_ROTOR2_TILT 1
-param set-default CA_ROTOR2_KM -0.05
-param set-default CA_ROTOR3_PX -1
-param set-default CA_ROTOR3_PY 1
-param set-default CA_ROTOR3_KM -0.05
-param set-default CA_SV_CS_COUNT 4
-param set-default CA_SV_CS0_TYPE 1
-param set-default CA_SV_CS0_TRQ_R -0.5
-param set-default CA_SV_CS1_TYPE 2
-param set-default CA_SV_CS1_TRQ_R 0.5
-param set-default CA_SV_CS2_TYPE 7
-param set-default CA_SV_CS2_TRQ_P 0.5
-param set-default CA_SV_CS2_TRQ_Y 0.5
-param set-default CA_SV_CS3_TYPE 8
-param set-default CA_SV_CS3_TRQ_P 0.5
-param set-default CA_SV_CS3_TRQ_Y -0.5
-param set-default CA_SV_TL_COUNT 2
+param set-default CA_ROTOR_COUNT 3
+param set-default CA_SV_TL0_MAXA 45.0000
+param set-default CA_SV_TL0_MINA -45.0000
+param set-default CA_SV_TL0_TD 90
+param set-default CA_SV_TL_COUNT 1
 
-param set-default MAV_TYPE 21
-param set-default VT_TYPE 1
