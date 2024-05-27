@@ -2,8 +2,13 @@
 #
 # @name FireEagle
 #
-# @type Multirotor with Tilt
+# @type Multirotor with Tilt231
 # @class Multirotor
+#
+# @output Motor1 motor 1
+# @output Motor2 motor 2
+# @output Motor3 motor 3
+# @output Servo1 yaw servo
 #
 # @board px4_fmu-v2 exclude
 # @board bitcraze_crazyflie exclude
@@ -13,7 +18,7 @@
 
 param set-default MAV_TYPE 15
 
-param set-default CA_AIRFRAME 8
+param set-default CA_AIRFRAME 6
 # Tricopter
 param set-default CA_ROTOR0_PX 0.3500
 param set-default CA_ROTOR0_PY 0.4000
