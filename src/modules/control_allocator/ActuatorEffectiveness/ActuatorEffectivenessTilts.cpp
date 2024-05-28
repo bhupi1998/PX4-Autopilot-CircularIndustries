@@ -44,7 +44,14 @@ ActuatorEffectivenessTilts::ActuatorEffectivenessTilts(ModuleParams *parent)
 {
 	for (int i = 0; i < MAX_COUNT; ++i) {
 		char buffer[17];
+		// snprintf takes in a string like printf and stores it in a pointer, in this case that's buffer
+		// %u indicates an unsigned integer.
+		// In this case all the tilt values are added.
+		// CA_SV_TL_%u_CT indicates what the servo is used for
 		snprintf(buffer, sizeof(buffer), "CA_SV_TL%u_CT", i);
+		// param_find returns the handle for the parameter that is been looked for.
+		// _param_handles is a struct defined in ActuatorEffectivenessTilts.hpp
+		// The structure consists of control which indicates what it con
 		_param_handles[i].control = param_find(buffer);
 		snprintf(buffer, sizeof(buffer), "CA_SV_TL%u_MINA", i);
 		_param_handles[i].min_angle = param_find(buffer);
@@ -53,7 +60,7 @@ ActuatorEffectivenessTilts::ActuatorEffectivenessTilts(ModuleParams *parent)
 		snprintf(buffer, sizeof(buffer), "CA_SV_TL%u_TD", i);
 		_param_handles[i].tilt_direction = param_find(buffer);
 	}
-
+	// param_find takes in a parameter and it returns a handle to the parameter
 	_count_handle = param_find("CA_SV_TL_COUNT");
 	updateParams();
 }
@@ -63,7 +70,8 @@ void ActuatorEffectivenessTilts::updateParams()
 	ModuleParams::updateParams();
 
 	int32_t count = 0;
-
+// How does param_get work?
+// found in param.h It looks for the handle and stores it in the specifed address.
 	if (param_get(_count_handle, &count) != 0) {
 		PX4_ERR("param_get failed");
 		return;
@@ -123,6 +131,24 @@ void ActuatorEffectivenessTilts::updateTorqueSign(const ActuatorEffectivenessRot
 			bool tilting_forwards = (int)_params[tilt_index].tilt_direction < 90 || (int)_params[tilt_index].tilt_direction > 270;
 			_torque[tilt_index](1) = tilting_forwards ? -1.f : 1.f;
 		}
+
+		// Adding Yaw and Roll control (experimental)
+		// now what...
+		if (_params[tilt_index].control == Control::YawAndRoll) {
+
+			// Find the yaw torque sign by checking the motor position and tilt direction.
+			// Rotate position by -tilt_direction around z, then check the sign of y pos
+			float tilt_direction = math::radians((float)_params[tilt_index].tilt_direction);
+			Vector3f rotated_pos = Dcmf{Eulerf{0.f, 0.f, -tilt_direction}} * geometry.rotors[i].position;
+
+			if (rotated_pos(1) < -0.01f) { // add minimal margin
+				_torque[tilt_index](2) = 1.f;
+
+			} else if (rotated_pos(1) > 0.01f) {
+				_torque[tilt_index](2) = -1.f;
+			}
+		}
+
 
 	}
 }

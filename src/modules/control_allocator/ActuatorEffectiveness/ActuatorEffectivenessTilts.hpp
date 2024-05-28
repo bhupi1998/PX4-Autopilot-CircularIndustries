@@ -42,7 +42,7 @@ class ActuatorEffectivenessTilts : public ModuleParams, public ActuatorEffective
 {
 public:
 
-	static constexpr int MAX_COUNT = 4;
+	static constexpr int MAX_COUNT = 5;
 
 	enum class Control : int32_t {
 		// This matches with the parameter
@@ -50,6 +50,7 @@ public:
 		Yaw = 1,
 		Pitch = 2,
 		YawAndPitch = 3,
+		YawAndRoll = 4,
 	};
 	enum class TiltDirection : int32_t {
 		// This matches with the parameter
@@ -90,6 +91,7 @@ private:
 	};
 
 	ParamHandles _param_handles[MAX_COUNT];
+	// param_t is 
 	param_t _count_handle;
 
 	Params _params[MAX_COUNT] {};

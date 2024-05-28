@@ -102,9 +102,9 @@ px4_add_romfs_files(
 
 	# [14000, 14999] MC with tilt
 	14001_generic_mc_with_tilt
-	14101_FireEagle2
 	16001_helicopter
 
+	14101_FireEagle
 	# [17000, 17999] Autogyro
 	17002_TF-AutoG2
 	17003_TF-G2

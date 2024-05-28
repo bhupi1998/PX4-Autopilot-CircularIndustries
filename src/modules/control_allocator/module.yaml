@@ -361,6 +361,7 @@ parameters:
                 1: 'Yaw'
                 2: 'Pitch'
                 3: 'Yaw and Pitch'
+                4: 'Yaw and Roll' # Added by Bp
             num_instances: *max_num_tilts
             instance_start: 0
             default: 1

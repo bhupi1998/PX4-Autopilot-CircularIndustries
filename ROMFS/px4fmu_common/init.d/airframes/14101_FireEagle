@@ -1,0 +1,45 @@
+#!/bin/sh
+#
+# @name FireEagle
+#
+# @type Multirotor with Tilt
+# @class Multirotor
+#
+# @output Motor1 motor 1
+# @output Motor2 motor 2
+# @output Servo1 yaw and roll servo
+# @output Servo2 yaw and roll servo
+# @board px4_fmu-v2 exclude
+# @board bitcraze_crazyflie exclude
+#
+
+. ${R}etc/init.d/rc.mc_defaults
+
+param set-default MAV_TYPE 21
+
+param set-default CA_AIRFRAME 8
+# BiCopter
+param set-default CA_ROTOR_COUNT 2
+
+# Motor locations
+param set-default CA_ROTOR0_PX 0.5000
+param set-default CA_ROTOR0_PY 0.0
+param set-default CA_ROTOR1_PX -0.500
+param set-default CA_ROTOR1_PY 0.0
+
+# Motor Tilt actuators
+param set-default CA_ROTOR0_TILT 1
+param set-default CA_ROTOR1_TILT 2
+
+param set-default CA_SV_TL_COUNT 2
+param set-default CA_SV_TL1_MAXA 45.0000
+param set-default CA_SV_TL1_MINA -45.0000
+param set-default CA_SV_TL1_TD 90
+param set-default CA_SV_TL2_MAXA 45.0000
+param set-default CA_SV_TL2_MINA -45.0000
+param set-default CA_SV_TL2_TD 90
+
+
+# Disable Airspeed sensors
+param set-default CBRK_AIRSPD_CHK 162128
+param set-default SYS_HAS_NUM_ASPD 0
