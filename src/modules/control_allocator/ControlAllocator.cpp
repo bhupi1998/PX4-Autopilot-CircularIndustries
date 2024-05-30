@@ -215,7 +215,7 @@ ControlAllocator::update_effectiveness_source()
 
 		// try to instanciate new effectiveness source
 		ActuatorEffectiveness *tmp = nullptr;
-
+		// ? Seems like here we selece the effectiveness configuration? Not sure what this is tbh.
 		switch (source) {
 		case EffectivenessSource::NONE:
 		case EffectivenessSource::MULTIROTOR:

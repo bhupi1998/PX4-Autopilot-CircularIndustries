@@ -89,12 +89,13 @@ void ActuatorEffectivenessRotors::updateParams()
 	ModuleParams::updateParams();
 
 	int32_t count = 0;
-
+	// ?count_handle is the CA_ROTOR_COUNT parameter
+	// ? get the parameter and save it in count
 	if (param_get(_count_handle, &count) != 0) {
 		PX4_ERR("param_get failed");
 		return;
 	}
-
+	// set num_rotors to the lesser of the two values
 	_geometry.num_rotors = math::min(NUM_ROTORS_MAX, (int)count);
 
 	for (int i = 0; i < _geometry.num_rotors; ++i) {

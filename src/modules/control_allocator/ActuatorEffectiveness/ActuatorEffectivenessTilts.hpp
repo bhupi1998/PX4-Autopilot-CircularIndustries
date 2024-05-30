@@ -50,6 +50,7 @@ public:
 		Yaw = 1,
 		Pitch = 2,
 		YawAndPitch = 3,
+		// ? I added this
 		YawAndRoll = 4,
 	};
 	enum class TiltDirection : int32_t {
@@ -91,7 +92,7 @@ private:
 	};
 
 	ParamHandles _param_handles[MAX_COUNT];
-	// param_t is 
+	// param_t is
 	param_t _count_handle;
 
 	Params _params[MAX_COUNT] {};

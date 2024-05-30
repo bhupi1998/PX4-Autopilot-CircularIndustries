@@ -38,8 +38,7 @@
  *
  * @author Julien Lecoeur <julien.lecoeur@gmail.com>
  */
-
-#pragma once
+#pragma once // ? includes this header file only once in a single compilation
 
 #include "ActuatorEffectiveness.hpp"
 
@@ -63,6 +62,7 @@ public:
 	static constexpr int NUM_ROTORS_MAX = 12;
 
 	struct RotorGeometry {
+		// ? Vector3f is a 3d vector
 		matrix::Vector3f position;
 		matrix::Vector3f axis;
 		float thrust_coef;
