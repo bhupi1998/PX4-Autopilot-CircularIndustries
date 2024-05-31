@@ -2,7 +2,7 @@
 #
 # @name FireEagle2
 #
-# @type Multirotor with Tilt231
+# @type Multirotor with Tilt
 # @class Multirotor
 #
 # @output Motor1 motor 1
@@ -29,12 +29,12 @@ param set-default CA_ROTOR0_TILT 1
 param set-default CA_ROTOR1_TILT 2
 
 param set-default CA_ROTOR_COUNT 2
+param set-default CA_SV_TL0_MAXA 45.0000
+param set-default CA_SV_TL0_MINA -45.0000
+param set-default CA_SV_TL0_TD 90
 param set-default CA_SV_TL1_MAXA 45.0000
 param set-default CA_SV_TL1_MINA -45.0000
 param set-default CA_SV_TL1_TD 90
-param set-default CA_SV_TL2_MAXA 45.0000
-param set-default CA_SV_TL2_MINA -45.0000
-param set-default CA_SV_TL2_TD 90
 param set-default CA_SV_TL_COUNT 2
 
 # set servo on AUX2 to reverse. This is a bitmask 2=0000000010
