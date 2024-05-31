@@ -102,7 +102,6 @@ void ActuatorEffectivenessTilts::updateTorqueSign(const ActuatorEffectivenessRot
 		if (tilt_index == -1 || tilt_index >= _count) {
 			continue;
 		}
-
 		if (_params[tilt_index].control == Control::Yaw || _params[tilt_index].control == Control::YawAndPitch) {
 
 			// Find the yaw torque sign by checking the motor position and tilt direction.
@@ -117,11 +116,12 @@ void ActuatorEffectivenessTilts::updateTorqueSign(const ActuatorEffectivenessRot
 				_torque[tilt_index](2) = -1.f;
 			}
 		}
-
+		//adjusting this to actually affect roll
 		if (!disable_pitch && (_params[tilt_index].control == Control::Pitch
 				       || _params[tilt_index].control == Control::YawAndPitch)) {
-			bool tilting_forwards = (int)_params[tilt_index].tilt_direction < 90 || (int)_params[tilt_index].tilt_direction > 270;
-			_torque[tilt_index](1) = tilting_forwards ? -1.f : 1.f;
+			// bool tilting_forwards = (int)_params[tilt_index].tilt_direction < 90 || (int)_params[tilt_index].tilt_direction > 270;
+			// _torque[tilt_index](0) = tilting_forwards ? -1.f : 1.f;
+			_torque[tilt_index](0) = -1.f;
 		}
 
 	}
