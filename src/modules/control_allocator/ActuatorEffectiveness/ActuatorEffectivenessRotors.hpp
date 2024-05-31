@@ -62,16 +62,16 @@ public:
 	static constexpr int NUM_ROTORS_MAX = 12;
 
 	struct RotorGeometry {
-		// ? Vector3f is a 3d vector
+		// ? Vector3f is a 3d vector. f stands for float
 		matrix::Vector3f position;
 		matrix::Vector3f axis;
 		float thrust_coef;
 		float moment_ratio;
-		int tilt_index;
+		int tilt_index; // ?IDK what tilt index is....
 	};
 
 	struct Geometry {
-		RotorGeometry rotors[NUM_ROTORS_MAX];
+		RotorGeometry rotors[NUM_ROTORS_MAX]; // ? array of type RotorGeometry
 		int num_rotors{0};
 		bool propeller_torque_disabled{false};
 		bool yaw_by_differential_thrust_disabled{false};

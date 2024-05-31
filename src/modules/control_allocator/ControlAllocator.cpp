@@ -412,7 +412,7 @@ ControlAllocator::Run()
 				c[1](5) = vehicle_thrust_setpoint.xyz[2];
 			}
 		}
-
+		// ! I think i'm getting close.
 		for (int i = 0; i < _num_control_allocation; ++i) {
 
 			_control_allocation[i]->setControlSetpoint(c[i]);
@@ -456,7 +456,7 @@ ControlAllocator::update_effectiveness_matrix_if_needed(EffectivenessUpdateReaso
 
 	if (reason == EffectivenessUpdateReason::NO_EXTERNAL_UPDATE
 	    && hrt_elapsed_time(&_last_effectiveness_update) < 100_ms) { // rate-limit updates
-		return;
+		return;allocate
 	}
 
 	if (_actuator_effectiveness->getEffectivenessMatrix(config, reason)) {
