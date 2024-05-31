@@ -57,6 +57,8 @@ int ActuatorEffectiveness::Configuration::addActuator(ActuatorType type, const m
 	effectiveness_matrices[selected_matrix](ControlAllocation::ControlAxis::THRUST_X, actuator_idx) = thrust(0);
 	effectiveness_matrices[selected_matrix](ControlAllocation::ControlAxis::THRUST_Y, actuator_idx) = thrust(1);
 	effectiveness_matrices[selected_matrix](ControlAllocation::ControlAxis::THRUST_Z, actuator_idx) = thrust(2);
+	// let's try to see this on the console.
+	printf(effectiveness_matrices[selected_matrix]);
 	matrix_selection_indexes[totalNumActuators()] = selected_matrix;
 	++num_actuators[(int)type];
 	return num_actuators_matrix[selected_matrix]++;
