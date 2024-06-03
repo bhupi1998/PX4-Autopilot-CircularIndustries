@@ -50,6 +50,7 @@ public:
 		Yaw = 1,
 		Pitch = 2,
 		YawAndPitch = 3,
+		YawAndRoll =4,
 	};
 	enum class TiltDirection : int32_t {
 		// This matches with the parameter
