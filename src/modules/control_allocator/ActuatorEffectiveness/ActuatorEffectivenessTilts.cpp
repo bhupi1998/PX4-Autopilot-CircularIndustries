@@ -102,7 +102,8 @@ void ActuatorEffectivenessTilts::updateTorqueSign(const ActuatorEffectivenessRot
 		if (tilt_index == -1 || tilt_index >= _count) {
 			continue;
 		}
-		if (_params[tilt_index].control == Control::Yaw || _params[tilt_index].control == Control::YawAndPitch) {
+		if (_params[tilt_index].control == Control::Yaw || _params[tilt_index].control == Control::YawAndPitch
+			|| _param[tilt_index].control == Control::YawAndRoll) {
 
 			// Find the yaw torque sign by checking the motor position and tilt direction.
 			// Rotate position by -tilt_direction around z, then check the sign of y pos
@@ -116,14 +117,19 @@ void ActuatorEffectivenessTilts::updateTorqueSign(const ActuatorEffectivenessRot
 				_torque[tilt_index](2) = -1.f;
 			}
 		}
-		//adjusting this to actually affect roll
 		if (!disable_pitch && (_params[tilt_index].control == Control::Pitch
 				       || _params[tilt_index].control == Control::YawAndPitch)) {
-			// bool tilting_forwards = (int)_params[tilt_index].tilt_direction < 90 || (int)_params[tilt_index].tilt_direction > 270;
-			// _torque[tilt_index](0) = tilting_forwards ? -1.f : 1.f;
-			_torque[tilt_index](0) = 1.f;
+			bool tilting_forwards = (int)_params[tilt_index].tilt_direction < 90 || (int)_params[tilt_index].tilt_direction > 270;
+			_torque[tilt_index](1) = tilting_forwards ? -1.f : 1.f;
 		}
-
+		// For bicopter use. Added by discord:bp_98
+		// Adding support for Roll control using tilting servos. Yaw is already supported so code above can be reused.
+		// _torque is a Vector. [roll scale, pitch scale, yaw scale, thrust scale]
+		if(_param[tilt_index].control == Control::YawAndRoll){
+			// how are these angles picked?
+			bool tilting_right = (int)_params[tilt_index].tilt_direction < 90 || (int)_params[tilt_index].tilt_direction > 270;
+			_torque[tilt_index](0) = tilting_right ? -1.f : 1.f;
+		}
 	}
 }
 
