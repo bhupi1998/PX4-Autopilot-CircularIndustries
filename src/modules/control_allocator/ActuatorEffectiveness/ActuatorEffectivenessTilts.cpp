@@ -121,7 +121,7 @@ void ActuatorEffectivenessTilts::updateTorqueSign(const ActuatorEffectivenessRot
 				       || _params[tilt_index].control == Control::YawAndPitch)) {
 			// bool tilting_forwards = (int)_params[tilt_index].tilt_direction < 90 || (int)_params[tilt_index].tilt_direction > 270;
 			// _torque[tilt_index](0) = tilting_forwards ? -1.f : 1.f;
-			_torque[tilt_index](0) = -1.f;
+			_torque[tilt_index](0) = 1.f;
 		}
 
 	}
