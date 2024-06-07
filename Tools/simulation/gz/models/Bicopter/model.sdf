@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sdf version="1.10">
     <model name='BiCopter'>
-      <link name='Base'>
+      <link name='base_link'>
         <sensor name="air_pressure_sensor" type="air_pressure">
           <always_on>1</always_on>
           <update_rate>50</update_rate>
@@ -39,7 +39,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/meshes/Base.dae</uri>
+              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/models/Base.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -66,7 +66,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/meshes/Base.dae</uri>
+              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/models/Base.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -134,7 +134,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/meshes/Motor.dae</uri>
+              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/models/Motor.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -156,7 +156,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/meshes/Motor.dae</uri>
+              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/models/Motor.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -224,7 +224,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/meshes/Motor.dae</uri>
+              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/models/Motor.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -246,7 +246,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/meshes/Motor.dae</uri>
+              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/models/Motor.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -314,7 +314,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/meshes/Prop.dae</uri>
+              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/models/Prop.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -336,7 +336,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/meshes/Prop.dae</uri>
+              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/models/Prop.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -404,7 +404,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/meshes/Prop.dae</uri>
+              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/models/Prop.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -426,7 +426,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/meshes/Prop.dae</uri>
+              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/models/Prop.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -478,7 +478,7 @@
         </collision>
       </link>
       <joint name='Motor1_Tilt_Joint' type='revolute'>
-        <parent>Base</parent>
+        <parent>base_link</parent>
         <child>Motor1</child>
         <pose>0 0 0 0 -0 0</pose>
         <axis>
@@ -509,7 +509,7 @@
         </physics>
       </joint>
       <joint name='Motor2_Tilt_Joint' type='revolute'>
-        <parent>Base</parent>
+        <parent>base_link</parent>
         <child>Motor2</child>
         <pose>0 0 0 0 -0 0</pose>
         <axis>
