@@ -85,7 +85,7 @@
             <izz>0.0011</izz>
           </inertia>
         </inertial>
-        <pose>-0.514 0.000654 0.655453 0 -0 0</pose>
+        <pose>-0.56 0.000654 0.655453 0 -0 0</pose>
         <visual name='visual'>
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
@@ -172,7 +172,7 @@
             <izz>0.00447</izz>
           </inertia>
         </inertial>
-        <pose>-0.516747 0.002793 0.713891 0 -0 0</pose>
+        <pose>-0.56 0.000654 0.713891 0 -0 0</pose>
         <visual name='visual'>
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
@@ -212,7 +212,7 @@
             <izz>0.00447</izz>
           </inertia>
         </inertial>
-        <pose>0.56 -0.000429 0.713891 0 -0 0</pose>
+        <pose>0.56 0.00032 0.713891 0 -0 0</pose>
         <visual name='visual'>
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
