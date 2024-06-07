@@ -19,14 +19,14 @@
           <update_rate>250</update_rate>
         </sensor>
         <inertial>
-          <mass>5</mass>
+          <mass>19.18</mass>
           <inertia>
-            <ixx>0.166667</ixx>
+            <ixx>1.57</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.166667</iyy>
-            <iyz>0</iyz>
-            <izz>0.166667</izz>
+            <iyy>1.03</iyy>
+            <iyz>0.02</iyz>
+            <izz>0.77</izz>
           </inertia>
           <pose>0 0 0 0 -0 0</pose>
         </inertial>
@@ -39,7 +39,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/models/Base.dae</uri>
+              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/meshes/Base.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -66,7 +66,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/models/Base.dae</uri>
+              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/meshes/Base.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -119,14 +119,14 @@
       </link>
       <link name='Motor1'>
         <inertial>
-          <mass>1</mass>
+          <mass>0.99063</mass>
           <inertia>
-            <ixx>0.166667</ixx>
+            <ixx>0.00082</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.166667</iyy>
+            <iyy>0.00082</iyy>
             <iyz>0</iyz>
-            <izz>0.166667</izz>
+            <izz>0.0011</izz>
           </inertia>
         </inertial>
         <pose>-0.514 0.000654 0.655453 0 -0 0</pose>
@@ -134,7 +134,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/models/Motor.dae</uri>
+              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/meshes/Motor.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -156,7 +156,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/models/Motor.dae</uri>
+              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/meshes/Motor.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -209,14 +209,14 @@
       </link>
       <link name='Motor2'>
         <inertial>
-          <mass>1</mass>
+          <mass>0.99063</mass>
           <inertia>
-            <ixx>0.166667</ixx>
+            <ixx>0.00082</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.166667</iyy>
+            <iyy>0.00082</iyy>
             <iyz>0</iyz>
-            <izz>0.166667</izz>
+            <izz>0.0011</izz>
           </inertia>
         </inertial>
         <pose>0.515632 0.00032 0.655453 0 -0 0</pose>
@@ -224,7 +224,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/models/Motor.dae</uri>
+              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/meshes/Motor.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -246,7 +246,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/models/Motor.dae</uri>
+              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/meshes/Motor.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -299,14 +299,11 @@
       </link>
       <link name='Prop1'>
         <inertial>
-          <mass>1</mass>
+          <mass>0.1</mass>
           <inertia>
-            <ixx>0.166667</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.166667</iyy>
-            <iyz>0</iyz>
-            <izz>0.166667</izz>
+            <ixx>0.00004</ixx>
+            <iyy>0.00451</iyy>
+            <izz>0.00447</izz>
           </inertia>
         </inertial>
         <pose>-0.516747 0.002793 0.713891 0 -0 0</pose>
@@ -314,7 +311,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/models/Prop.dae</uri>
+              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/meshes/Prop.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -336,7 +333,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/models/Prop.dae</uri>
+              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/meshes/Prop.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -389,22 +386,21 @@
       </link>
       <link name='Prop2'>
         <inertial>
-          <mass>1</mass>
-          <inertia>
-            <ixx>0.166667</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.166667</iyy>
-            <iyz>0</iyz>
-            <izz>0.166667</izz>
-          </inertia>
+          <inertial>
+            <mass>0.1</mass>
+            <inertia>
+              <ixx>0.00004</ixx>
+              <iyy>0.00451</iyy>
+              <izz>0.00447</izz>
+            </inertia>
+          </inertial>
         </inertial>
         <pose>0.514744 -0.000429 0.713891 0 -0 0</pose>
         <visual name='visual'>
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/models/Prop.dae</uri>
+              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/meshes/Prop.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -426,7 +422,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/models/Prop.dae</uri>
+              <uri>/home/bp/github/PX4-Autopilot-CircularIndustries/Tools/simulation/gz/models/Bicopter/meshes/Prop.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -486,25 +482,14 @@
           <limit>
             <lower>-0.785398163</lower>
             <upper>0.785398163</upper>
-            <effort>-1</effort>
-            <velocity>-1</velocity>
           </limit>
           <dynamics>
-            <spring_reference>0</spring_reference>
-            <spring_stiffness>0</spring_stiffness>
-            <damping>0</damping>
+            <damping>1</damping>
           </dynamics>
         </axis>
         <physics>
           <ode>
-            <limit>
-              <cfm>0</cfm>
-              <erp>0.2</erp>
-            </limit>
-            <suspension>
-              <cfm>0</cfm>
-              <erp>0.2</erp>
-            </suspension>
+            <implicit_spring_damper>1</implicit_spring_damper>
           </ode>
         </physics>
       </joint>
@@ -517,25 +502,14 @@
           <limit>
             <lower>-0.785398163</lower>
             <upper>0.785398163</upper>
-            <effort>-1</effort>
-            <velocity>-1</velocity>
           </limit>
           <dynamics>
-            <spring_reference>0</spring_reference>
-            <spring_stiffness>0</spring_stiffness>
-            <damping>0</damping>
+            <damping>1</damping>
           </dynamics>
         </axis>
         <physics>
           <ode>
-            <limit>
-              <cfm>0</cfm>
-              <erp>0.2</erp>
-            </limit>
-            <suspension>
-              <cfm>0</cfm>
-              <erp>0.2</erp>
-            </suspension>
+            <implicit_spring_damper>1</implicit_spring_damper>
           </ode>
         </physics>
       </joint>
@@ -557,18 +531,6 @@
             <damping>0</damping>
           </dynamics>
         </axis>
-        <physics>
-          <ode>
-            <limit>
-              <cfm>0</cfm>
-              <erp>0.2</erp>
-            </limit>
-            <suspension>
-              <cfm>0</cfm>
-              <erp>0.2</erp>
-            </suspension>
-          </ode>
-        </physics>
       </joint>
       <joint name='Prop2_Joint' type='revolute'>
         <parent>Motor2</parent>
@@ -588,18 +550,6 @@
             <damping>0</damping>
           </dynamics>
         </axis>
-        <physics>
-          <ode>
-            <limit>
-              <cfm>0</cfm>
-              <erp>0.2</erp>
-            </limit>
-            <suspension>
-              <cfm>0</cfm>
-              <erp>0.2</erp>
-            </suspension>
-          </ode>
-        </physics>
       </joint>
       <static>0</static>
       <allow_auto_disable>1</allow_auto_disable>
@@ -609,9 +559,9 @@
             <turningDirection>cw</turningDirection>
             <timeConstantUp>0.0125</timeConstantUp>
             <timeConstantDown>0.025</timeConstantDown>
-            <maxRotVelocity>1000.0</maxRotVelocity>
-            <motorConstant>8.54858e-06</motorConstant>
-            <momentConstant>0.016</momentConstant>
+            <maxRotVelocity>7000.0</maxRotVelocity>
+            <motorConstant>0.000143</motorConstant>
+            <momentConstant>0.073</momentConstant>
             <commandSubTopic>command/motor_speed</commandSubTopic>
             <motorNumber>0</motorNumber>
             <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
@@ -625,11 +575,11 @@
             <turningDirection>ccw</turningDirection>
             <timeConstantUp>0.0125</timeConstantUp>
             <timeConstantDown>0.025</timeConstantDown>
-            <maxRotVelocity>1000.0</maxRotVelocity>
-            <motorConstant>8.54858e-06</motorConstant>
-            <momentConstant>0.016</momentConstant>
+            <maxRotVelocity>7000.0</maxRotVelocity>
+            <motorConstant>0.000143</motorConstant>
+            <momentConstant>0.073</momentConstant>
             <commandSubTopic>command/motor_speed</commandSubTopic>
-            <motorNumber>1</motorNumber>
+            <motorNumber>0</motorNumber>
             <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
             <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
             <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
@@ -640,15 +590,15 @@
           filename="gz-sim-joint-position-controller-system" name="gz::sim::systems::JointPositionController">
           <joint_name>Motor1_Tilt_Joint</joint_name>
           <sub_topic>servo_0</sub_topic>
-          <p_gain>20.0</p_gain>
-          <i_gain>5</i_gain>
+          <p_gain>20</p_gain>
+          <i_gain>4</i_gain>
         </plugin>
         <plugin
         filename="gz-sim-joint-position-controller-system" name="gz::sim::systems::JointPositionController">
         <joint_name>Motor2_Tilt_Joint</joint_name>
         <sub_topic>servo_1</sub_topic>
-        <p_gain>20.0</p_gain>
-        <i_gain>5</i_gain>
+        <p_gain>20</p_gain>
+        <i_gain>4</i_gain>
       </plugin>
     </model>
 </sdf>
