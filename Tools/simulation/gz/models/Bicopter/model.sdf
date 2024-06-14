@@ -292,8 +292,6 @@
           <limit>
             <lower>-1.79769e+308</lower>
             <upper>1.79769e+308</upper>
-            <effort>-1</effort>
-            <velocity>-1</velocity>
           </limit>
           <dynamics>
             <spring_reference>0</spring_reference>
@@ -311,8 +309,6 @@
           <limit>
             <lower>-1.79769e+308</lower>
             <upper>1.79769e+308</upper>
-            <effort>-1</effort>
-            <velocity>-1</velocity>
           </limit>
           <dynamics>
             <spring_reference>0</spring_reference>
@@ -326,14 +322,14 @@
         <plugin filename="gz-sim-multicopter-motor-model-system" name="gz::sim::systems::MulticopterMotorModel">
             <jointName>Prop1_Joint</jointName>
             <linkName>Prop1</linkName>
+            <motorNumber>0</motorNumber>
             <turningDirection>cw</turningDirection>
-            <timeConstantUp>0.0125</timeConstantUp>
-            <timeConstantDown>0.025</timeConstantDown>
+            <timeConstantUp>0.0225</timeConstantUp>
+            <timeConstantDown>0.035</timeConstantDown>
             <maxRotVelocity>7000.0</maxRotVelocity>
             <motorConstant>0.000143</motorConstant>
             <momentConstant>0.073</momentConstant>
             <commandSubTopic>command/motor_speed</commandSubTopic>
-            <motorNumber>0</motorNumber>
             <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
             <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
             <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
@@ -342,14 +338,14 @@
           <plugin filename="gz-sim-multicopter-motor-model-system" name="gz::sim::systems::MulticopterMotorModel">
             <jointName>Prop2_Joint</jointName>
             <linkName>Prop2</linkName>
+            <motorNumber>1</motorNumber>
             <turningDirection>ccw</turningDirection>
-            <timeConstantUp>0.0125</timeConstantUp>
-            <timeConstantDown>0.025</timeConstantDown>
+            <timeConstantUp>0.0225</timeConstantUp>
+            <timeConstantDown>0.035</timeConstantDown>
             <maxRotVelocity>7000.0</maxRotVelocity>
             <motorConstant>0.000143</motorConstant>
             <momentConstant>0.073</momentConstant>
             <commandSubTopic>command/motor_speed</commandSubTopic>
-            <motorNumber>0</motorNumber>
             <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
             <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
             <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
